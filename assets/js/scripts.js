@@ -1,7 +1,7 @@
 
 ///  localstorage
 
-var tasks = {};
+var tasks = [];
 
 var loadsT= function(){
   var tasks = localStorage.getItem("tasks")
@@ -9,31 +9,33 @@ var loadsT= function(){
       tasks = JSON.parse(tasks)
     }
   else {
-    tasks = {};
+    tasks = [];
   }  
 }
 
 
-
-
 $('.saveBtn').on('click', function (event) {
     event.preventDefault();
-
-   var timeTask=$('#id');
-   var taskL= $('.description')
-  tasks={
-      timeTask,
-      var taskL
-  };
-
-});
+    var node = $(this).prev()[0];
+    var timeTask = node.id
+    var taskDescription = node.value.trim();
+    
+    task = {};
+    task[timeTask] = taskDescription
+    
+    console.log(task)
+    tasks.push(task);
+    saveTasks();
+ });
 
 
 //save task in localStorage
 
 var saveTasks = function() {
-   // localStorage.setItem(('hour', JSON.stringify(tasks))
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 };
+
+
 
 
 // showinfo()
