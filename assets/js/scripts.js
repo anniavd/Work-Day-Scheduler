@@ -1,17 +1,26 @@
 
 ///  localstorage
 
-var tasks = [];
+  var tasks = [];
 
-var loadsT= function(){
-  var tasks = localStorage.getItem("tasks")
-   if (tasks) {
-      tasks = JSON.parse(tasks)
+
+
+   var loadsT= function( ){
+    
+    var tasks =JSON.parse(localStorage.getItem("tasks" ));
+    
+    console.log("Task: ",tasks);
+
+    if(tasks){
+       for(var i=0;i<tasks.length;i++)
+       {
+       
+        $('#' + tasks[i].tasksid).val(tasks[i].tasksdes)
+       }
     }
-  else {
-    tasks = [];
-  }  
-}
+  } 
+ 
+
 
 
 $('.saveBtn').on('click', function (event) {
@@ -20,20 +29,37 @@ $('.saveBtn').on('click', function (event) {
     var timeTask = node.id
     var taskDescription = node.value.trim();
     
-    task = {};
-    task[timeTask] = taskDescription
-    
-    console.log(task)
+    task = {  
+      tasksid:timeTask,
+      tasksdes:taskDescription
+    };
+
     tasks.push(task);
+
     saveTasks();
+    
  });
 
-
-//save task in localStorage
+ 
 
 var saveTasks = function() {
+
   localStorage.setItem('tasks', JSON.stringify(tasks));
-};
+ }
+ 
+
+
+  var now = moment().format("dddd, MMMM Do YYYY") ;   
+  console.log( now);
+
+
+
+loadsT();
+ 
+
+  
+  
+
 
 
 
