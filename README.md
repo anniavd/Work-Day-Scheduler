@@ -27,4 +27,4 @@ This will be informed to the user through 3 colors (purple, red and green).
 > Green: When there are still enough hours to do the activity.
 > 
 
-![show the differents color depending the hour for the day](/assets/images/color.jpg)
+![show the differents color depending the hour for the day](/assets/images/color-hour.jpg)
