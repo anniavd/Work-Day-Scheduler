@@ -7,12 +7,14 @@ The activities will be displayed and according to the **time of day** that is go
 This will be informed to the user through 3 colors (purple, red and green).
 
 
-***webpage picture and link**
+ ![Homepage](/assets/images/web-page.jpg)
+ _____________________________________________________________________
+ Visit the site! [Work Day Scheduler](https://anniavd.github.io/Portfolio//)
 
 
 > The app show the user the current day displayed at the top of the calendar.
 
-***current day picture *
+![show a date for today](/assets/images/current-day.jpg)
 
 
 >
@@ -25,4 +27,4 @@ This will be informed to the user through 3 colors (purple, red and green).
 > Green: When there are still enough hours to do the activity.
 > 
 
-***color hour picture **
+![show the differents color depending the hour for the day](/assets/images/color.jpg)
