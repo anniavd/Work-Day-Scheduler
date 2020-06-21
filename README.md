@@ -9,7 +9,7 @@ This will be informed to the user through 3 colors (purple, red and green).
 
  ![Homepage](/assets/images/web-page.jpg)
  _____________________________________________________________________
- Visit the site! [Work Day Scheduler](https://anniavd.github.io/Portfolio//)
+ Visit the site! [Work Day Scheduler](https://anniavd.github.io/work-day-scheduler/)
 
 
 > The app show the user the current day displayed at the top of the calendar.
