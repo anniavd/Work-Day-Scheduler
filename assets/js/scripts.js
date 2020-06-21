@@ -38,11 +38,16 @@ $('.saveBtn').on('click', function (event) {
     tasksid: timeTask,
     tasksdes: taskDescription
   };
+  //validate the user in information
+  if (taskDescription === ""){
+    alert("You need to feel the info.")
+  }else{
  //add the objects to the array
   tasks.push(task);
 
  //call function  save the tasks
   saveTasks();
+  }
 
 });
 
